@@ -1,11 +1,15 @@
 #include "main.h"
 
 /**
- * prompt - Displays the prompt to stdout
- * @str: String to be used as prompt
+ * print_string - Prints a string to stdout
+ * @str: String to be printed
  *
+ * Return: void
  */
 void print_string(char *str)
 {
-	write(1, str, strlen(str));
+	if (write(1, str, strlen(str)) == -1)
+	{
+		return;
+	}
 }

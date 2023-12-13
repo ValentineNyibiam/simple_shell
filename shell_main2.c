@@ -6,7 +6,7 @@
  * @shell: A struct containing data of the shell
  *
  * Return: 0(Success)
-*/
+ */
 
 int shell_main(data shell)
 {
@@ -30,6 +30,6 @@ int shell_main(data shell)
 		free(token_array);
 		free(input);
 	}
-
+	free(input);
 	return (0);
 }

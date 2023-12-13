@@ -14,6 +14,7 @@
  * @isatty: The value of the isatty function
  * @ac: The number of arguments passed to the shell program
  * @av: An array of the arguments passed to the program
+ * @cmd_count: Tracks the number of commands executed by the shell program
 */
 typedef struct shell
 {

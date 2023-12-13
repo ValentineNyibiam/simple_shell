@@ -3,7 +3,7 @@
 /**
  * tokenize_input - Tokenizes the input passed to the program
  * @input: The string to be tokenized
- * @delim: The delimiters to used
+ * @delim: The delimiters to be used
  *
  * Return: An array of the tokens
  */

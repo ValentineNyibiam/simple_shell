@@ -2,7 +2,7 @@
 
 /**
  * execute_cmd - Executes the command input by the user
- * @token_array - An array string of the commands passed by the user
+ * @token_array: An array string of the commands passed by the user
  *
  * Return: Nothing
  */
@@ -15,18 +15,18 @@ void execute_cmd(char **token_array)
 	child_pid = fork();
 	if (child_pid == -1)
 	{
-        perror("fork failed");
-        return;
+		perror("fork failed");
+		return;
 	}
 
 	if (child_pid == 0)
 	{
 		if (token_array)
-		{s
+		{
 			/* Get the command */
 			command_len = strlen("/bin/") + strlen(token_array[0]) + 1;
 			command = malloc(sizeof(char) * command_len);
-			if(command != NULL)
+			if (command != NULL)
 			{
 				strcpy(command, "/bin/");
 				strcat(command, token_array[0]);
