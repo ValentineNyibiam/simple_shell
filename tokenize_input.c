@@ -1,4 +1,4 @@
-#include "main.h"
+#include "shell.h"
 
 /**
  * tokenize_input - Tokenizes the input passed to the program
@@ -12,7 +12,7 @@ char **tokenize_input(char *input, char *delim)
 	char *input_copy, **token_array, *token;
 	size_t token_count = 0, i = 0;
 
-	input_copy = malloc(sizeof(char) * (strlen(input) + 1));
+	input_copy = malloc(sizeof(char) * (_strlen(input) + 1));
 	if (input_copy == NULL)
 	{
 		perror("malloc failed");
@@ -32,7 +32,7 @@ char **tokenize_input(char *input, char *delim)
 	token = strtok(input, delim);
 	while (token != NULL)
 	{
-		token_array[i] = malloc(sizeof(char) * (strlen(token) + 1));
+		token_array[i] = malloc(sizeof(char) * (_strlen(token) + 1));
 		if (token_array[i] == NULL)
 		{
 			perror("malloc failed");

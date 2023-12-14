@@ -1,5 +1,5 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef SHELL_H
+#define SHELL_H
 
 /* Libraries */
 #include <stdio.h>
@@ -35,5 +35,6 @@ char *read_input(void);
 void print_string(char *str);
 char **tokenize_input(char *input, char *delim);
 void execute_cmd(char **token_array);
+int _strlen(char *prgStr);
 
-#endif /* MAIN_H */
+#endif /* SHELL_H */

@@ -1,4 +1,4 @@
-#include "main.h"
+#include "shell.h"
 
 /**
  * print_string - Prints a string to stdout
@@ -8,7 +8,7 @@
  */
 void print_string(char *str)
 {
-	if (write(1, str, strlen(str)) == -1)
+	if (write(1, str, _strlen(str)) == -1)
 	{
 		return;
 	}

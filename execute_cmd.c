@@ -1,4 +1,4 @@
-#include "main.h"
+#include "shell.h"
 
 /**
  * execute_cmd - Executes the command input by the user
@@ -24,7 +24,7 @@ void execute_cmd(char **token_array)
 		if (token_array)
 		{
 			/* Get the command */
-			command_len = strlen("/bin/") + strlen(token_array[0]) + 1;
+			command_len = _strlen("/bin/") + _strlen(token_array[0]) + 1;
 			command = malloc(sizeof(char) * command_len);
 			if (command != NULL)
 			{
