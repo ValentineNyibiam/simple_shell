@@ -18,7 +18,7 @@ char **tokenize_input(char *input, char *delim)
 		perror("malloc failed");
 		exit(EXIT_FAILURE);
 	}
-	strcpy(input_copy, input);
+	_strcpy(input_copy, input);
 
 	token = strtok(input_copy, delim);
 	while (token != NULL)
@@ -38,7 +38,7 @@ char **tokenize_input(char *input, char *delim)
 			perror("malloc failed");
 			exit(EXIT_FAILURE);
 		}
-		strcpy(token_array[i], token);
+		_strcpy(token_array[i], token);
 		token  = strtok(NULL, delim);
 		i++;
 	}

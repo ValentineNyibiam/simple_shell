@@ -28,8 +28,8 @@ void execute_cmd(char **token_array)
 			command = malloc(sizeof(char) * command_len);
 			if (command != NULL)
 			{
-				strcpy(command, "/bin/");
-				strcat(command, token_array[0]);
+				_strcpy(command, "/bin/");
+				_strcat(command, token_array[0]);
 			}
 			else
 			{

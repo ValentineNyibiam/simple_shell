@@ -36,5 +36,8 @@ void print_string(char *str);
 char **tokenize_input(char *input, char *delim);
 void execute_cmd(char **token_array);
 int _strlen(char *prgStr);
+char *_strcat(char *dest, char *src);
+char *_strcpy(char *dest, char *src);
+char *_strdup(char *str);
 
 #endif /* SHELL_H */
